@@ -1,0 +1,117 @@
+@import '../../../styles.scss';
+
+.login-bg{
+    background: $bg-page;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-container{
+        background: $bg-white;
+        border-radius: 8px;
+        box-shadow: $box-shadow;
+        width: 90%;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        .login-content{
+            padding:30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            &.disabled{
+                z-index: 0;    
+                height: 0;    
+            }
+            .login-header{
+                border-left: 5px solid $primary-color;
+                padding-left: 10px;
+                width: 100%;
+                .login-title{
+                    color: $title-color;
+                    text-transform: uppercase;
+                }
+            }
+            .login-body{
+                margin-top: 20px;
+                width: 90%;
+                .login-form{
+                    display: flex;
+                    flex-direction: column;
+                    .login-btn{
+                        background-color: $primary-color;
+                        color: $text-white;
+                    }
+                }
+            }
+
+        }
+        .register-btn{
+            background: $primary-color;
+            color: $text-white;
+            position: absolute;
+            bottom:30px;
+            right: 10px;
+            .content-btn{
+                margin: 0;
+                padding: 0;
+                vertical-align: 0%;
+            }
+            &.gologin{
+                animation: jump infinite forwards ease 1.5s;
+            }
+        }
+        .register-content{
+            height: 0;
+            overflow: hidden;
+            transition: 0.3s all linear;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .login-header{
+                border-left: 5px solid $primary-color;
+                padding-left: 10px;
+                width: 100%;
+                .login-title{
+                    color: $title-color;
+                    text-transform: uppercase;
+                }
+            }
+            .login-body{
+                margin-top: 20px;
+                width: 90%;
+                .login-form{
+                    display: flex;
+                    flex-direction: column;
+                    .login-btn{
+                        background-color: $primary-color;
+                        color: $text-white;
+                    }
+                }
+            }
+            &.active{
+                padding:30px 0;
+                height: 450px;
+                z-index: 1;
+            }
+            
+        }
+    }
+    
+}
+
+@keyframes jump{
+    0%{
+        bottom:30px;
+        transform: scale(1);
+    }
+    50%{
+        bottom: 50px;
+        transform: scale(1.1);
+    }
+    100%{
+        bottom:30px;
+        transform: scale(1);
+    }
+}

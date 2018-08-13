@@ -1,0 +1,55 @@
+// My costum palette
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$thomas-primary: mat-palette($mat-deep-purple);
+$thomas-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+$thomas-warn:    mat-palette($mat-red);
+
+$thomas-theme: mat-light-theme($thomas-primary, $thomas-accent, $thomas-warn);
+
+@include angular-material-theme($thomas-theme);
+
+
+$bg-page: #f2f2f2;
+$bg-white:#ffffff; 
+$text-white: #ffffff;
+$title-color: #673ab7;
+$primary-color: #673ab7;
+$box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 2px 0 -2px rgba(0,0,0,.2), 0 2px 5px 0 rgba(0,0,0,.12);
+//Reset 
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+  }
+  
+  *,
+  *:after,
+  *:before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+  
+  img {
+      max-width : 100%;
+  }
+  
+  a {
+      text-decoration : none;
+  }
+  
+  a:hover {
+      text-decoration : underline;
+  }
+  ul,li{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  .input-full-width{
+      width: 100%;
+  }
